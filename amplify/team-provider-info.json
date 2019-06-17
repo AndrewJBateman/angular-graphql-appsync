@@ -1,0 +1,19 @@
+{
+    "graphqlenv": {
+        "awscloudformation": {
+            "AuthRoleName": "angulargraphqlappsyn-graphqlenv-20190617173444-authRole",
+            "UnauthRoleArn": "arn:aws:iam::178989187509:role/angulargraphqlappsyn-graphqlenv-20190617173444-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::178989187509:role/angulargraphqlappsyn-graphqlenv-20190617173444-authRole",
+            "Region": "eu-west-2",
+            "DeploymentBucketName": "angulargraphqlappsyn-graphqlenv-20190617173444-deployment",
+            "UnauthRoleName": "angulargraphqlappsyn-graphqlenv-20190617173444-unauthRole",
+            "StackName": "angulargraphqlappsyn-graphqlenv-20190617173444",
+            "StackId": "arn:aws:cloudformation:eu-west-2:178989187509:stack/angulargraphqlappsyn-graphqlenv-20190617173444/6f4b7e30-9115-11e9-8cb3-0208395e2c4a"
+        },
+        "categories": {
+            "auth": {
+                "angulargraphqlappsyn15891f15": {}
+            }
+        }
+    }
+}

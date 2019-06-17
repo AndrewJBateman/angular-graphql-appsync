@@ -1,0 +1,10 @@
+{
+    "AppSyncApiName": "angulargraphqlappsyn",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authangulargraphqlappsyn15891f15",
+            "Outputs.UserPoolId"
+        ]
+    }
+}
