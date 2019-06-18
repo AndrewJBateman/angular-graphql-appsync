@@ -4,6 +4,7 @@
 		"indent": {
       "options": ["tabs", 2]
     },
+    "no-debugger": false,
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {
