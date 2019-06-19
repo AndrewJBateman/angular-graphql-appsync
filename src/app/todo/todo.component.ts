@@ -14,20 +14,27 @@ export class TodoComponent implements OnInit {
 	async ngOnInit() {
 		const result = await this.api.ListTodos();
 		this.allTodos = result.items;
+
+		// on init subscribe to all todos
+		this.api.OnCreateTodoListener.subscribe({
+			next: (todo: any) => {
+				const newTodo = todo.value.data.onCreateTodo;
+				this.allTodos.push(newTodo);
+			}
+		});
 	}
 
-	async createTodo() {
+	async createTodo(todoName) {
+		if (todoName.value.length) {
+			const newTodo = {
+				name: todoName.value,
+				body: 'sample description',
+				completed: false
+			};
+			await this.api.CreateTodo(newTodo);
+			todoName.value = null;
+		}
 
-		const newTodo = {
-			name: 'Todo ' + Math.floor(Math.random() * 100),
-			body: 'sample description',
-			completed: false
-		};
-
-		const result = await this.api.CreateTodo(newTodo);
-
-		this.allTodos.push(result);
-		debugger;
 	}
 
 	async listTodos() {

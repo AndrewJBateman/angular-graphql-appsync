@@ -1,6 +1,10 @@
 # Angular GraphQL AppSync
 
-* App using Angular 8 with aws amplify and appsync to create a todo database. The home screen displays an aws authorization page. Once authorised the user can create todos that are listed in the UI.
+* App using Angular 8 to create a todo list. AWS amplify and appsync are used to communicate with the todo database, hosted in a GraphQL serverless AWS backend.
+
+* The home screen displays an aws authorization page. Once authorised the user can create todos that are listed in the UI.
+
+* Amplify GraphQL Client used to create queries and mutations. Subscriptions also created so when a todo item is added it is seen by all users via the subscription service.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -23,6 +27,7 @@
 
 ![Example screenshot](./img/auth.png).
 ![Example screenshot](./img/todos.png)
+![Example screenshot](./img/updates.png)
 
 ## Technologies
 
@@ -32,7 +37,7 @@
 
 * [RxJS Library v6.4.0](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
 
-* [aws-amplify v1.1.28](https://www.npmjs.com/package/aws-amplify) core Javascript library.
+* [aws-amplify v1.1.28](https://www.npmjs.com/package/aws-amplify) core Javascript library. [Documentation](https://aws-amplify.github.io/docs/js/start?platform=purejs)
 
 * [aws-amplify-angular v3.0.3](https://www.npmjs.com/package/aws-amplify-angular) AWS Amplify library package, with building blocks for Angular App development.
 
@@ -42,33 +47,32 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app a
 
 ## Code Examples
 
-* `todo.component.ts` extract showing asynchronous function to createa todo object.
+* `todo.component.ts` extract from ngOnInit showing todoListener subcription.
 
 ```Typescript
-async createTodo() {
+async ngOnInit() {
+  const result = await this.api.ListTodos();
+  this.allTodos = result.items;
 
-  const newTodo = {
-    name: 'Todo ' + Math.floor(Math.random() * 100),
-    body: 'sample description',
-    completed: false
-  };
-
-  const result = await this.api.CreateTodo(newTodo);
-
-    this.allTodos.push(result);
-    debugger;
+  // on init subscribe to all todos
+  this.api.OnCreateTodoListener.subscribe({
+    next: (todo: any) => {
+      const newTodo = todo.value.data.onCreateTodo;
+      this.allTodos.push(newTodo);
+    }
+  });
 }
 ```
 
 ## Features
 
-* tba
+* Subscription service used so all users can see mutations to data.
 
 ## Status & To-Do List
 
 * Status: Working aws auth works perfectly, very basic aws todo database.
 
-* To-Do: Continue tutorial.
+* To-Do: expand to use more features of aws-amflify.
 
 ## Inspiration
 
