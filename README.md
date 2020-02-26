@@ -1,9 +1,7 @@
 # Angular GraphQL AppSync
 
-* App using Angular 8 to create a todo list. AWS amplify and appsync are used to communicate with the todo database, hosted in a GraphQL serverless AWS backend.
-
+* App using Angular 9 to create a todo list. AWS amplify and appsync are used to communicate with the todo database, hosted in a GraphQL serverless AWS backend.
 * The home screen displays an aws authorization page. Once authorised the user can create todos that are listed in the UI.
-
 * Amplify GraphQL Client used to create queries and mutations. Subscriptions also created so when a todo item is added it is seen by all users via the subscription service.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
@@ -31,19 +29,14 @@
 
 ## Technologies
 
-* [Angular v8.0.0](https://angular.io/)
-
-* [Angular CLI v8.0.1](https://cli.angular.io/).
-
+* [Angular v9.1.0](https://angular.io/)
 * [RxJS Library v6.4.0](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
-
-* [aws-amplify v1.1.28](https://www.npmjs.com/package/aws-amplify) core Javascript library. [Documentation](https://aws-amplify.github.io/docs/js/start?platform=purejs)
-
-* [aws-amplify-angular v3.0.3](https://www.npmjs.com/package/aws-amplify-angular) AWS Amplify library package, with building blocks for Angular App development.
+* [aws-amplify v1.3.3](https://www.npmjs.com/package/aws-amplify) core Javascript library. [Documentation](https://aws-amplify.github.io/docs/js/start?platform=purejs)
+* [aws-amplify-angular v3.2.3](https://www.npmjs.com/package/aws-amplify-angular) AWS Amplify library package, with building blocks for Angular App development.
 
 ## Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app automatically reloads if you change any of the source files.
+Once app fixed: Install dependencies using `npm i` then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app automatically reloads if you change any of the source files.
 
 ## Code Examples
 
@@ -70,9 +63,8 @@ async ngOnInit() {
 
 ## Status & To-Do List
 
-* Status: Working aws auth works perfectly, very basic aws todo database.
-
-* To-Do: expand to use more features of aws-amflify.
+* Status: After Angular 9 upgrade not working.
+* To-Do: aws-amplify official statement: "Currently, Angular 9 is not supported as this is a newer version of Angular that has come out recently. We are tracking this internally in order to investigate adding support." Wait until they have made it compatible.
 
 ## Inspiration
 
