@@ -1,44 +1,49 @@
-# Angular GraphQL AppSync
+# :zap: Angular GraphQL AppSync
 
+* Requires configuration to new AWS Amplify version
 * App using Angular 9 to create a todo list. AWS amplify and appsync are used to communicate with the todo database, hosted in a GraphQL serverless AWS backend.
-* The home screen displays an aws authorization page. Once authorised the user can create todos that are listed in the UI.
+* The home screen displays an AWS authorization page. Once authorised the user can create todos that are listed in the UI.
 * Amplify GraphQL Client used to create queries and mutations. Subscriptions also created so when a todo item is added it is seen by all users via the subscription service.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
-## Table of contents
+## :page_facing_up: Table of contents
 
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
+* [:zap: Angular GraphQL AppSync](#zap-angular-graphql-appsync)
+  * [:page_facing_up: Table of contents](#pagefacingup-table-of-contents)
+  * [:books: General info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Technologies](#signalstrength-technologies)
+  * [:floppy_disk: Setup](#floppydisk-setup)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Features](#cool-features)
+  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clap: Inspiration](#clap-inspiration)
+  * [:envelope: Contact](#envelope-contact)
 
-## General info
+## :books: General info
 
 * [AWS Amplify](https://aws.amazon.com/amplify/?nc1=h_ls) makes it easy to create, configure, and implement scalable mobile and web apps powered by AWS. It provides a framework to integrate the backend with iOS, Android, Web, and React Native frontends. It allows you to select the capabilities needed, a.g. authorization, analytics or offline data sync.
 
-## Screenshots
+## :camera: Screenshots
 
 ![Example screenshot](./img/auth.png).
 ![Example screenshot](./img/todos.png)
 ![Example screenshot](./img/updates.png)
 
-## Technologies
+## :signal_strength: Technologies
 
-* [Angular v9.1.0](https://angular.io/)
-* [RxJS Library v6.4.0](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
-* [aws-amplify v1.3.3](https://www.npmjs.com/package/aws-amplify) core Javascript library. [Documentation](https://aws-amplify.github.io/docs/js/start?platform=purejs)
-* [aws-amplify-angular v3.2.3](https://www.npmjs.com/package/aws-amplify-angular) AWS Amplify library package, with building blocks for Angular App development.
+* [Angular v9](https://angular.io/)
+* [RxJS Library v6](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
+* [aws-amplify v3](https://www.npmjs.com/package/aws-amplify) core Javascript library. [Documentation](https://aws-amplify.github.io/docs/js/start?platform=purejs)
+* [aws-amplify-angular v5](https://www.npmjs.com/package/aws-amplify-angular) AWS Amplify library package, with building blocks for Angular App development.
 
-## Setup
+## :floppy_disk: Setup
 
-Once app fixed: Install dependencies using `npm i` then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app automatically reloads if you change any of the source files.
+* Requires an AWS account and for Aws Amplify to be configured: [ref documentation](https://docs.amplify.aws/start/getting-started/installation/q/integration/angular#option-1-watch-the-video-guide)
+* Once app fixed: Install dependencies using `npm i` then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app automatically reloads if you change any of the source files.
 
-## Code Examples
+## :computer: Code Examples
 
 * `todo.component.ts` extract from ngOnInit showing todoListener subcription.
 
@@ -57,19 +62,19 @@ async ngOnInit() {
 }
 ```
 
-## Features
+## :cool: Features
 
 * Subscription service used so all users can see mutations to data.
 
-## Status & To-Do List
+## :clipboard: Status & To-Do List
 
 * Status: After Angular 9 upgrade not working.
-* To-Do: aws-amplify official statement: "Currently, Angular 9 is not supported as this is a newer version of Angular that has come out recently. We are tracking this internally in order to investigate adding support." Wait until they have made it compatible.
+* To-Do: Configure AWS Amplify: [ref documentation](https://docs.amplify.aws/start/getting-started/installation/q/integration/angular#option-1-watch-the-video-guide)
 
-## Inspiration
+## :clap: Inspiration
 
 * [AWS AppSync Tutorial - GraphQL APIs with AppSync, Amplify and Angular](https://www.youtube.com/watch?v=QEMfnr5MO1w)
 
-## Contact
+## :envelope: Contact
 
-Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
