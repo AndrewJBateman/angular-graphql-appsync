@@ -1,7 +1,8 @@
 # :zap: Angular GraphQL AppSync
 
 * Requires configuration to new AWS Amplify version
-* App using Angular 9 to create a todo list. AWS amplify and appsync are used to communicate with the todo database, hosted in a GraphQL serverless AWS backend.
+* App using Angular 10 to create a todo list.
+* AWS amplify and appsync are used to communicate with the todo database, hosted in a GraphQL serverless AWS backend.
 * The home screen displays an AWS authorization page. Once authorised the user can create todos that are listed in the UI.
 * Amplify GraphQL Client used to create queries and mutations. Subscriptions also created so when a todo item is added it is seen by all users via the subscription service.
 
@@ -33,7 +34,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v9](https://angular.io/)
+* [Angular v10](https://angular.io/)
 * [RxJS Library v6](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
 * [aws-amplify v3](https://www.npmjs.com/package/aws-amplify) core Javascript library. [Documentation](https://aws-amplify.github.io/docs/js/start?platform=purejs)
 * [aws-amplify-angular v5](https://www.npmjs.com/package/aws-amplify-angular) AWS Amplify library package, with building blocks for Angular App development.
@@ -41,7 +42,6 @@
 ## :floppy_disk: Setup
 
 * Requires an AWS account and for Aws Amplify to be configured: [ref documentation](https://docs.amplify.aws/start/getting-started/installation/q/integration/angular#option-1-watch-the-video-guide)
-* npm i --save-dev @angular-devkit/build-angular
 * Once app fixed: Install dependencies using `npm i` then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app automatically reloads if you change any of the source files.
 
 ## :computer: Code Examples
@@ -69,7 +69,7 @@ async ngOnInit() {
 
 ## :clipboard: Status & To-Do List
 
-* Status: After Angular 9 upgrade not working.
+* Status: After Angular upgrade app is not working.
 * To-Do: Configure AWS Amplify: [ref documentation](https://docs.amplify.aws/start/getting-started/installation/q/integration/angular#option-1-watch-the-video-guide)
 
 ## :clap: Inspiration
